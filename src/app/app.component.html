@@ -1,3 +1,35 @@
-<h1>
-  {{title}}
-</h1>
+<div class="mfb-container">
+  <h1>
+  material design floating button
+  </h1>
+
+  <p>
+    Standalone Angularjs directive for Material floating action buttons. 
+Shamelessly Openly inspired by Google Inbox, ng-material-floating-button Evernote and Path.
+  </p>
+
+  <form>
+    <select [(ngModel)]="config.placment" [ngModelOptions]="{standalone: true}">
+      <option *ngFor="let placment of placements" [value]="placment.value">{{placment.key}}</option>
+    </select>
+
+    <select [(ngModel)]="config.effect" [ngModelOptions]="{standalone: true}">
+      <option *ngFor="let effect of effects" [value]="effect.value">{{effect.key}}</option>
+    </select>
+
+    <select [(ngModel)]="config.toggle" [ngModelOptions]="{standalone: true}">
+      <option *ngFor="let toggle of toggles" [value]="toggle">{{toggle}}</option>
+    </select>
+  </form>
+  
+</div>
+
+<ng2-floating-button 
+  [placement]="config.placment" 
+  [effect]="config.effect" 
+  [label]="config.label" 
+  [iconClass]="config.iconClass" 
+  [activeIconClass]="config.activeIconClass"
+  [toggle]="config.toggle"
+  [buttons]="buttons">
+</ng2-floating-button>

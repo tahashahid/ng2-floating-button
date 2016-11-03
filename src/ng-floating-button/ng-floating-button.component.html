@@ -1,0 +1,17 @@
+<ul mfb-menu class="mfb-component--{{placement}} {{effect}}" [attr.data-mfb-state]="state" [attr.toggling-method]="toggle" [attr.data-mfb-toggle]="toggle">
+  <li class="mfb-component__wrap">
+    <a class="mfb-component__button--main" [attr.data-mfb-label]="label"
+    (click)="clicked()" (mouseenter)="entered()" (mouseleave)="leaved()">
+      <!-- the main button icon visibile by default -->
+      <i class="mfb-component__main-icon--resting {{iconClass}}"></i>
+      <!-- the main button icon visibile when the user is hovering/interacting with the menu -->
+      <i class="mfb-component__main-icon--active {{activeIconClass}}"></i>
+    </a>
+
+    <ul class="mfb-component__list">
+      <!-- a child button, repeat as many times as needed -->
+      <li mfb-button *ngFor="let button of buttons" [button]="button"></li>
+    </ul>
+
+  </li>
+</ul>
