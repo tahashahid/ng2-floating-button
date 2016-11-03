@@ -35,31 +35,31 @@ export class AppComponent {
 
   placements = [
     {
+      value: 'br',
+      key: 'bottom right'
+    },
+    {
       value: 'bl',
       key: 'bottom left'
     },
     {
-      value: 'br',
-      key: 'bottom right'
+      value: 'tr',
+      key: 'top right'
     },
     {
       value: 'tl',
       key: 'top left'
     },
-    {
-      value: 'tr',
-      key: 'top right'
-    }
   ];
 
   effects = [
+     {
+      value: 'mfb-zoomin',
+      key: 'Zoom In'
+    },
     {
       value: 'mfb-slidein',
       key: 'Slide In + Fade'
-    },
-    {
-      value: 'mfb-zoomin',
-      key: 'Zoom In'
     },
     {
       value: 'mfb-fountain',
