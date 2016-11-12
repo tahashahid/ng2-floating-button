@@ -25,7 +25,7 @@ export class AppComponent {
       }
     },
     {
-      iconClass: 'ion-social-twitter',
+      iconClass: 'ion-social-linkedin',
       label: 'linkedin',
       onClick: function(){
         location.href = 'https://www.linkedin.com/in/taha-shahid-55ab2243';
