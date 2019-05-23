@@ -9,18 +9,19 @@ import { MfbButton } from './mfb-button/mfb-button';
 export class NgFloatingButtonComponent implements OnInit {
   isOpen: boolean = false;
   state: string = 'closed';
-  
+
   @Input() placement: string;
   @Input() effect: string;
   @Input() label: string;
   @Input() iconClass: string;
   @Input() activeIconClass: string;
-  @Input() toggle: string = 'click'; 
+  @Input() toggle: string = 'click';
   @Input() buttons: Array<MfbButton>;
 
   constructor() { }
 
-  clicked(){
+  clicked(event){
+    event.preventDefault()
     if(this.toggle != 'click') return false;
     this.isOpen = !this.isOpen;
     if(this.isOpen){
@@ -30,12 +31,14 @@ export class NgFloatingButtonComponent implements OnInit {
     }
   }
 
-  entered(){
+  entered(event){
+    event.preventDefault()
     if(this.toggle != 'hover') return false;
     this.state = 'open';
   }
 
-  leaved(){
+  leaved(event){
+    event.preventDefault()
     if(this.toggle != 'hover') return false;
     this.state = 'closed';
   }

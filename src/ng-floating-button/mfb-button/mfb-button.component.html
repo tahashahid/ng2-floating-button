@@ -1,3 +1,4 @@
-<a href [attr.data-mfb-label]="button.label" (click)="buttonClick()" class="mfb-component__button--child">
+<a href [attr.data-mfb-label]="button.label" (click)="buttonClick($event)"
+  class="mfb-component__button--child" href="JavaScript:void(0);">
   <i class="mfb-component__child-icon {{button.iconClass}}"></i>
 </a>

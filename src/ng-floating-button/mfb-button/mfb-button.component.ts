@@ -8,8 +8,9 @@ import { MfbButton } from './mfb-button';
 })
 export class MfbButtonComponent implements OnInit {
   @Input() button: MfbButton;
-  
-  buttonClick(){
+
+  buttonClick(event){
+    event.preventDefault()
     this.button.onClick();
     return false;
   }
